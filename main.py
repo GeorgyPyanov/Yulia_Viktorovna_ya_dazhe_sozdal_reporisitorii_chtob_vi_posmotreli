@@ -22,7 +22,7 @@ m = 'Добрый день!!! Приветствуем вас в межгала�
 rect0, text0 = text_speech(
     pygame.font.Font('k.ttf', 20), m, (255, 255, 255),
     200, 100, False)
-la = 1200
+la = 1201
 color = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
 sprite1 = Text('Да', 40, (255, 255, 40), 50, 50, 300, 300)
 all_sprites.add(sprite1)
@@ -57,10 +57,10 @@ while running:
     screen.fill((225, 225, 225))
     screen.blit(BackGround.image, BackGround.rect)
     events = pygame.event.get()
+    la -= 0.5
     if la % 500 == 0 and m[-1] == '?':
         color = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
     a(la, 100, color)
-    la -= 0.5
     if n >= 1:
         n += 1
         screen.fill((0, 0, 0))
